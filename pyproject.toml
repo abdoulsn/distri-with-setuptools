@@ -1,6 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "distri-with-setuptools"
-version = "0.1.0"
+version = "0.0.4"
+readme = "README.md"
 description = "Add your description here"
 requires-python = ">=3.12"
 dependencies = []
+authors = [{name = "A. Random Developer", email = "author@example.com"}]
+keywords = ["sample", "setuptools", "development"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only"
+]
+
+optional-dependencies = {dev = ["check-manifest"], test = ["coverage"]}
+urls = {"Bug Reports" = "https://github.com/abdoulsn/distri-with-setuptools/issues", "Source" = "https://github.com/abdoulsn/distri-with-setuptools"}
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true
